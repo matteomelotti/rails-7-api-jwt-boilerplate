@@ -1,5 +1,5 @@
 help:
-	@ echo 'setup build create_database install_gems tstart attach_web console_app console_db'
+	@ echo 'setup build create_database install_gems start attach_web console_app console_db'
 
 setup:
   docker-compose run web rails new . --api --force --database=postgresql --T
