@@ -1,0 +1,9 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  host: db
+  port: 5432
+  username: app_user
+  password: password
+  database: app_live
+  pool: 5
