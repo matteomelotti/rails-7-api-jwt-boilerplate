@@ -51,3 +51,4 @@ end
 gem "jwt", "~> 2.6"
 # Use ActiveModel has secure password
 gem "bcrypt", "~> 3.1", ">= 3.1.18"
+gem 'sidekiq', '~> 7.0', '>= 7.0.2'
