@@ -40,6 +40,7 @@ group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
   gem 'byebug'
+  gem 'annotate', '~> 3.2'
 end
 
 group :development do
@@ -51,4 +52,6 @@ end
 gem "jwt", "~> 2.6"
 # Use ActiveModel has secure password
 gem "bcrypt", "~> 3.1", ">= 3.1.18"
-gem 'sidekiq', '~> 7.0', '>= 7.0.2'
+gem 'sidekiq', '~> 6.5', '>= 6.5.8'
+gem 'sidekiq-cron', '~> 1.9', '>= 1.9.1'
+gem 'sidekiq-throttled', '~> 0.17.0'

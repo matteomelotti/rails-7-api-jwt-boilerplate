@@ -1,4 +1,6 @@
+require 'sidekiq/throttled/web'
 require 'sidekiq/web'
+require 'sidekiq/cron/web'
 # Configure Sidekiq-specific session middleware
 Sidekiq::Web.use ActionDispatch::Cookies
 Sidekiq::Web.use ActionDispatch::Session::CookieStore, key: "_interslice_session"
@@ -11,8 +13,8 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      resources :users
       post '/auth/login', to: 'sessions#login'
+      resources :users
     end
   end
 end
