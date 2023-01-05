@@ -1,0 +1,10 @@
+---
+:concurrency: 4
+:queues:
+  - heavy_jobs
+  - default
+  - mailers
+:process_limits:
+  default: 4
+  heavy_jobs: 1
+  mailers: 4
