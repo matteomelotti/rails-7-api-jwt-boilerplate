@@ -29,9 +29,11 @@ services:
     environment:
       - POSTGRES_USER=app_user
       - POSTGRES_PASSWORD=password
-      - POSTGRES_DB=sequra_backend_challenge
+      - POSTGRES_DB=app_live
     expose:
       - 5432:5432
+    ports:
+      - "5432:5432"
     volumes:
       - db:/var/lib/postgresql/data
       - "./docker/dev/setup_database.sh:/usr/local/bin/setup_database.sh"
@@ -57,6 +59,7 @@ services:
     tty: true
     environment:
       <<: *global-variables
+
 volumes:
   redis:
   bundler_gems:
