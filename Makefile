@@ -1,5 +1,5 @@
 help:
-	@ echo 'setup build create_database install_gems start attach_web console_app console_db'
+	@ echo 'setup build create_database install_gems start attach_web console_app console_db seed'
 
 setup:
   docker-compose run web rails new . --api --force --database=postgresql --T
@@ -23,10 +23,10 @@ seed:
 	docker-compose run --rm web rails db:seed
 
 create_database:
-  docker-compose run --rm web rake db:create
+	docker-compose run --rm web rake db:create
 
 run_migrations:
-  docker-compose run --rm web rake db:migrate
+	docker-compose run --rm web rake db:migrate
 
 attach_web:
 	docker attach sequra-backend-challenge-web-1
